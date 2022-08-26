@@ -1,0 +1,25 @@
+<div class="header-container">
+  <a href="#" class="logo"></a>
+  <div class="menu">
+    <ul>
+      <li><a href="#">Ссылки</a></li>
+      <li><a href="#">Контакты</a></li>
+      <li><a href="#">Теги</a></li>
+      <li><a href="#">Просьбы</a></li>
+      <li><a href="#">Избранное</a></li>
+      <li><a href="#">Посещения</a></li>
+    </ul>
+    <div class="search-box">
+      <div *ngIf="!showSearchBar" (click)="onClick()" [ngStyle]="displaySearchIcon">
+        <i class="fas fa-search"></i>
+      </div>
+      <div *ngIf="showSearchBar" [@searchBarAnimation] class="search-bar">
+        <i class="fas fa-search"></i>
+        <input type="text" />
+        <i class="fa fa-times" aria-hidden="true" (click)="onClick()"></i>
+        <button>Найти</button>
+      </div>
+    </div>
+    <div class="add-icon"><i class="fas fa-plus-circle"></i></div>
+  </div>
+</div>
